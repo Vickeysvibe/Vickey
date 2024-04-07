@@ -1,0 +1,57 @@
+.home {
+  height: 100%;
+  width: 50%;
+}
+.logo {
+  display: none;
+  color: aliceblue;
+  font-weight: 500;
+  opacity: 0.7;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-left: -35px;
+}
+.intro {
+  height: auto;
+  font-family: "Reem Kufi Fun", sans-serif;
+  color: azure;
+  padding-top: 30px;
+}
+.image {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
+.image img {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  border: 2px solid rgb(211, 211, 211);
+  margin: 30px 0px;
+}
+.intro h4 {
+  width: 100%;
+  text-align: center;
+  font-size: 60px;
+  margin: 0;
+  font-weight: 200;
+}
+.intro h3 {
+  font-weight: 200;
+  font-size: 30px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+.intro p {
+  margin-top: 40px;
+  padding-bottom: 50px;
+  width: 80%;
+  text-align: center;
+  margin-left: 10%;
+  font-size: 13px;
+}
