@@ -2,6 +2,13 @@
   height: 100%;
   width: 50%;
 }
+.butt {
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
 .logo {
   display: none;
   color: aliceblue;
@@ -11,6 +18,7 @@
   padding-top: 10px;
   padding-left: 10px;
   margin-left: -35px;
+  font-family: "Pacifico", cursive;
 }
 .intro {
   height: auto;
@@ -54,4 +62,5 @@
   text-align: center;
   margin-left: 10%;
   font-size: 13px;
+  color: rgb(99, 99, 99);
 }
