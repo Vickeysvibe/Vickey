@@ -74,6 +74,7 @@
 @media only screen and (max-width: 999px) {
   .skills {
     margin-top: -50px;
+    overflow-x: hidden;
   }
   .grid {
     display: grid;
@@ -90,7 +91,7 @@
     justify-content: center;
     background-color: #1a1a1a;
     border-radius: 10px;
-    opacity: 0.3;
+    opacity: 1;
     transition: 0.5s;
   }
 

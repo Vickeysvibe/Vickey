@@ -4,8 +4,12 @@ import React from "react";
 import "../css/layout.css";
 import { Home } from "./Home";
 import { Info } from "./Info";
+import github from "../svgs/github.svg";
+import insta from "../svgs/insta.svg";
+import linkedin from "../svgs/linkedin.svg";
 import me from "../images/image.png";
 import { Link } from "react-router-dom";
+import logo from "../images/logo.png";
 
 export function Layout() {
   return (
@@ -17,6 +21,7 @@ export function Layout() {
       <div className="mobileLayout">
         <nav>
           <h1>Vibe</h1>
+          <img src={logo} alt="logo" />
         </nav>
         <div className="container">
           <div className="content">
@@ -40,9 +45,15 @@ export function Layout() {
           </div>
         </div>
         <div className="link">
-          <div>Github</div>
-          <div>LinkedIn</div>
-          <div>Instagram</div>
+          <a href="https://github.com/Vickeysvibe">
+            <img src={github} alt="" />
+          </a>
+          <a href="https://www.instagram.com/vickeys_vibe/">
+            <img src={insta} alt="" />
+          </a>
+          <a href="https://www.linkedin.com/in/vigneshwaran-l-0b9004257/">
+            <img src={linkedin} alt="" />
+          </a>
         </div>
       </div>
     </>
