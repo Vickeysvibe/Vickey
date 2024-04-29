@@ -1,5 +1,6 @@
 import "./App.css";
 import { Home } from "./components/Home";
+import { SideMini } from "./components/SideMini";
 import { SidePanel } from "./components/SidePanel";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -21,7 +22,7 @@ function App() {
             path="/explore"
             element={
               <div className="inner">
-                <SidePanel />
+                <SideMini />
               </div>
             }
           />

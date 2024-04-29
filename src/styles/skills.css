@@ -2,6 +2,7 @@
 
 .wrapper {
   width: 80%;
+  background-color: #4c8d7c;
   margin: 50px auto;
   margin-top: -30px;
 }
@@ -76,15 +77,20 @@ p.attribution a {
 }
 
 /* Responsive hack */
-@media only screen and (min-width: 499px) and (max-width: 1212px) {
+@media only screen and (max-width: 1212px) {
   .wrapper {
-    width: 500px;
+    width: 100%;
+    margin: 0;
+  }
+  .gallery ul li {
+    width: 10px;
+    height: 10px;
   }
 }
 
 @media only screen and (max-width: 498px) {
   .wrapper {
-    width: 300px;
+    width: 100%;
   }
 
   div.gallery ul {
@@ -104,4 +110,8 @@ p.attribution a {
   opacity: 0.4;
   font-size: 20px;
   font-family: "Reem Kufi Fun", sans-serif;
+}
+.skills {
+  background-color: #4c8d7c;
+  width: 100%;
 }
