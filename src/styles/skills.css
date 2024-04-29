@@ -32,10 +32,6 @@
   height: 80px;
 }
 
-body {
-  margin: 24px;
-}
-
 /* Responsive hack */
 @media only screen and (max-width: 1212px) {
   .wrapper {
@@ -73,4 +69,29 @@ body {
 }
 .skills {
   width: 100%;
+}
+
+@media only screen and (max-width: 999px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 24px;
+    max-width: 840px;
+    margin-inline: auto;
+  }
+  .grid div {
+    aspect-ratio: 0.1/0.1;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    opacity: 0.3;
+    transition: 0.5s;
+  }
+
+  .grid div img {
+    height: 40px;
+  }
 }

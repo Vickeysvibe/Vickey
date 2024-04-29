@@ -1,4 +1,11 @@
-.sidepanel {
+.sidemini {
   width: 50%;
   height: 80px;
 }
+
+/* @media only screen and (max-width: 999px) {
+  .sidemini {
+    max-width: 100vw;
+    min-width: 100vw;
+  }
+} */
