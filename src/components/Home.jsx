@@ -1,18 +1,14 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-unused-vars */
 import React from "react";
-import "../styles/home.css";
-import image from "../images/image.png";
-import { Thoughts } from "./Thoughts";
-import { Link } from "react-router-dom";
+import "../css/home.css";
+import me from "../images/image.png";
 export const Home = () => {
   return (
     <div className="home">
-      <div className="logo">Vibe</div>
-      <div className="intro">
-        <div className="image">
-          <img src={image} alt="moonji" />
-        </div>
-        <h3>Hello there !</h3>
-        <h4>I'm Vigneshwaran</h4>
+      <div className="about">
+        <h1>Hello There,</h1>
+        <h1>I'm Vigneshwaran</h1>
         <p>
           Hey there! I'm your <span>friendly neighbourhood</span> full-stack{" "}
           <span>JavaScript </span> junkie, always hungry for new challenges!
@@ -22,18 +18,13 @@ export const Home = () => {
           – I live, breathe, <span>hate and love JS</span>
         </p>
       </div>
-      <div className="butt">
-        <Link
-          class="inline-flex items-center px-4 py-2 mt-2 font-semibold tracking-tighter text-white transition duration-500 ease-in-out transform bg-transparent border rounded-lg text-md md:mt-0 hover:text-black hover:bg-white focus:shadow-outline"
-          to={"/explore"}
-        >
-          <div class="flex text-lg tracking-tighter">
-            <span class="justify-center">Explore </span>
-          </div>
-        </Link>
+      <div className="thoughts"></div>
+      <div className="links">
+        <img src={me} />
+        <div>github</div>
+        <div>linkedin</div>
+        <div>instagram</div>
       </div>
-      <Thoughts />
-      <div></div>
     </div>
   );
 };

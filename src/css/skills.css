@@ -7,21 +7,21 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
   max-width: 840px;
   margin-inline: auto;
 }
 
 .grid div {
-  aspect-ratio: 0.1/0.1;
+  aspect-ratio: 0.01/0.01;
   overflow: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1a1a1a;
+  background-color: #222222;
   border-radius: 20px;
-  opacity: 0.3;
+  opacity: 0.5;
   transition: 0.5s;
 }
 .grid div:hover {
@@ -29,7 +29,7 @@
   opacity: 1;
 }
 .grid div img {
-  height: 80px;
+  height: 50px;
 }
 
 /* Responsive hack */
@@ -63,18 +63,21 @@
   margin-top: 80px;
   margin-bottom: 30px;
   color: aliceblue;
-  opacity: 0.4;
+  opacity: 1;
   font-size: 20px;
-  font-family: "Reem Kufi Fun", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 .skills {
   width: 100%;
 }
 
 @media only screen and (max-width: 999px) {
+  .skills {
+    margin-top: -50px;
+  }
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 24px;
     max-width: 840px;
     margin-inline: auto;

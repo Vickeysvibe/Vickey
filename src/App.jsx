@@ -1,7 +1,6 @@
 import "./App.css";
-import { Home } from "./components/Home";
-import { SideMini } from "./components/SideMini";
-import { SidePanel } from "./components/SidePanel";
+import { Info } from "./components/Info";
+import { Layout } from "./components/Layout";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -9,26 +8,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <div className="inner">
-                <Home />
-                <SidePanel />
-              </div>
-            }
-          />
-          <Route
-            path="/explore"
-            element={
-              <div className="inner">
-                <SideMini />
-              </div>
-            }
-          />
+          <Route path="/" Component={Layout} />
+          <Route path="/works" Component={Info} />
         </Routes>
       </BrowserRouter>
-      <script src="https://cdn.tailwindcss.com"></script>
     </div>
   );
 }

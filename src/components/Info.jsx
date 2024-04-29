@@ -1,9 +1,10 @@
 import React from "react";
-import "../styles/sidepanel.css";
+import "../css/info.css";
 import { Skills } from "./Skills";
-export const SidePanel = () => {
+
+export const Info = () => {
   return (
-    <div className="sidepanel">
+    <div className="info">
       <Skills />
     </div>
   );
