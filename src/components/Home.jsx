@@ -3,6 +3,7 @@
 import React from "react";
 import "../css/home.css";
 import me from "../images/image.png";
+import { Quote } from "./Quote.jsx";
 export const Home = () => {
   return (
     <div className="home">
@@ -18,12 +19,16 @@ export const Home = () => {
           – I live, breathe, <span>hate and love JS</span>
         </p>
       </div>
-      <div className="thoughts"></div>
+      <div className="thoughts">
+        <Quote />
+      </div>
       <div className="links">
-        <img src={me} />
-        <div>github</div>
-        <div>linkedin</div>
-        <div>instagram</div>
+        <img src={me} alt="moonji" />
+        <a href="https://github.com/Vickeysvibe">Github</a>
+        <a href="https://www.instagram.com/vickeys_vibe/">Instagram</a>
+        <a href="https://www.linkedin.com/in/vigneshwaran-l-0b9004257/">
+          Linkedin
+        </a>
       </div>
     </div>
   );

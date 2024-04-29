@@ -10,6 +10,7 @@ import linkedin from "../svgs/linkedin.svg";
 import me from "../images/image.png";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
+import { Quote } from "./Quote";
 
 export function Layout() {
   return (
@@ -43,6 +44,9 @@ export function Layout() {
               </Link>
             </div>
           </div>
+        </div>
+        <div className="qt">
+          <Quote />
         </div>
         <div className="link">
           <a href="https://github.com/Vickeysvibe">

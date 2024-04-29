@@ -4,15 +4,91 @@ html {
   padding: 0;
   cursor: url("./images/cursor.png");
 }
-
 body {
   cursor: url("./svgs/cursor.svg");
   background-color: #151515;
-  margin: 0;
-  padding: 0;
 }
 .App {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+blockquote {
+  max-width: 40rem;
+  margin-inline: auto;
+  opacity: 0.7;
+  .content {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  blockquote {
+    max-width: 40rem;
+    margin-inline: auto;
+    opacity: 0.7;
+    .content {
+      font-size: 10px;
+    }
+  }
+}
+
+/* blockquote card colors */
+
+blockquote.q-card-color-2 {
+  --accent-color: rgb(243 243 243);
+  --bg-color: rgb(34, 34, 34);
+  --dot-color: rgba(0, 0, 0, 0.125);
+  --text-color: rgb(243 243 243);
+  --text-color-author: rgb(33 29 30);
+}
+
+/* blockquote card setup*/
+blockquote.q-card {
+  --padding: 1rem;
+  padding: var(--padding);
+  color: var(--text-color, black);
+  font-weight: 600;
+  background-color: var(--bg-color, white);
+  display: grid;
+  gap: 1rem;
+  background-image: radial-gradient(
+    circle,
+    var(--dot-color, rgba(0, 0, 0, 0.125)) calc(25% - 1px),
+    transparent 25%
+  );
+  background-size: 0.5rem 0.5rem;
+  border-radius: 0.25rem;
+}
+blockquote.q-card::before {
+  --qHeight: 4rem;
+  content: "";
+  margin-left: calc(var(--padding) * -1);
+  margin-top: calc(var(--padding) * -1);
+  height: var(--qHeight);
+  width: calc(var(--qHeight) * 1.1);
+  background-image: radial-gradient(
+      circle at bottom right,
+      transparent calc(var(--qHeight) / 4 - 1px),
+      var(--accent-color, black) calc(var(--qHeight) / 4)
+        calc(var(--qHeight) / 2),
+      transparent calc(var(--qHeight) / 2 + 1px)
+    ),
+    linear-gradient(var(--accent-color, black), var(--accent-color, black));
+  background-size: calc(var(--qHeight) / 2) calc(var(--qHeight) / 2);
+  background-position: top left, bottom left;
+  background-repeat: space no-repeat;
+}
+
+blockquote.q-card > .author {
+  color: var(--text-color-author, white);
+  background-color: var(--accent-color, black);
+  justify-self: end;
+  font-size: 0.75em;
+  padding: 0.5em 1em;
+  border-radius: 0.25rem;
+}
+blockquote.q-card > .author::before {
+  content: "- ";
 }

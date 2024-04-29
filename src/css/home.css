@@ -28,9 +28,11 @@
   }
 }
 .thoughts {
-  height: 400px;
+  height: 300px;
   width: 100%;
-  background-color: blue;
+  display: flex;
+  align-items: self-start;
+  justify-content: center;
 }
 .links {
   display: flex;
