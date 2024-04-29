@@ -1,78 +1,39 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700);
 
-.wrapper {
+.boxxxx {
   width: 80%;
-  margin: 50px auto;
-  margin-top: -30px;
+  margin-left: 10%;
 }
 
-div.gallery {
-  margin-top: 30px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 24px;
+  max-width: 840px;
+  margin-inline: auto;
 }
 
-div.gallery ul {
-  list-style-type: none;
-  margin-left: 35px;
-  background-color: #4c8d7c;
-}
-
-/* animation */
-div.gallery ul li,
-div.gallery li img {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-div.gallery ul li {
+.grid div {
+  aspect-ratio: 0.1/0.1;
+  overflow: auto;
   display: flex;
-  justify-content: center;
   align-items: center;
-  float: left;
-  width: 130px;
-  height: 130px;
-  margin: 5px;
-  padding: 5px;
-  background-color: #000000;
-  z-index: 0;
+  justify-content: center;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  opacity: 0.3;
+  transition: 0.5s;
 }
-
-/* Make sure z-index is higher on hover */
-/* Ensure that hover image overlapped the others */
-div.gallery ul li:hover {
-  z-index: 5;
+.grid div:hover {
+  transform: scale(1.1);
+  opacity: 1;
 }
-
-/* Image is position nicely under li */
-div.gallery ul li img {
-  left: 0;
-  top: 0;
-  border: 1px solid #070707;
-  padding: 5px;
-  width: 80px;
+.grid div img {
   height: 80px;
-  background: #020202;
 }
 
-div.gallery ul li img:hover {
-  width: 100px;
-  height: 100px;
-  top: 65%;
-  left: 65%;
-}
-
-p.attribution {
-  font-family: "Consolas";
-  color: #000;
-  clear: both;
-  text-align: center;
-  line-height: 25px;
-  padding-top: 30px;
-}
-
-p.attribution a {
-  color: #4c8d7c;
+body {
+  margin: 24px;
 }
 
 /* Responsive hack */
@@ -102,9 +63,9 @@ p.attribution a {
   width: 100%;
   text-align: left;
   font-weight: 600;
-  margin-left: 16%;
+  margin-left: 10%;
   margin-top: 80px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: aliceblue;
   opacity: 0.4;
   font-size: 20px;
