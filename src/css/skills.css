@@ -32,29 +32,6 @@
   height: 50px;
 }
 
-/* Responsive hack */
-@media only screen and (max-width: 1212px) {
-  .wrapper {
-    width: 100%;
-    margin: 0;
-  }
-  .gallery ul li {
-    width: 10px;
-    height: 10px;
-  }
-}
-
-@media only screen and (max-width: 498px) {
-  .wrapper {
-    width: 100%;
-  }
-
-  div.gallery ul {
-    list-style-type: none;
-    margin: 0;
-  }
-}
-
 .topic {
   width: 100%;
   text-align: left;
@@ -91,7 +68,7 @@
     justify-content: center;
     background-color: #1a1a1a;
     border-radius: 10px;
-    opacity: 1;
+    opacity: 0.6;
     transition: 0.5s;
   }
 

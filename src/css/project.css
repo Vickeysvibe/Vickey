@@ -1,6 +1,7 @@
 .boxxxx {
   width: 80%;
   margin-left: 10%;
+  margin-bottom: 50px;
   font-family: "Quicksand", sans-serif;
 }
 
@@ -31,6 +32,7 @@
   }
   h3 {
     font-size: 25px;
+    font-weight: 500;
   }
   h6 {
     font-size: 10px;
@@ -144,6 +146,7 @@
         height: 100%;
         margin-bottom: 0px;
         text-align: center;
+        font-size: 10px;
       }
     }
 
