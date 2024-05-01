@@ -42,7 +42,7 @@ blockquote {
 
 blockquote.q-card-color-2 {
   --accent-color: rgb(243 243 243);
-  --bg-color: rgb(34, 34, 34);
+  --bg-color: #1b1b1d;
   --dot-color: rgba(0, 0, 0, 0.125);
   --text-color: rgb(243 243 243);
   --text-color-author: rgb(33 29 30);
