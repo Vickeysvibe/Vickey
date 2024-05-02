@@ -6,6 +6,7 @@ import logo from "../images/logo.png";
 import github from "../svgs/github.svg";
 import insta from "../svgs/insta.svg";
 import linkedin from "../svgs/linkedin.svg";
+import { BlogList } from "./BlogList";
 
 export const Info = () => {
   return (
@@ -16,6 +17,7 @@ export const Info = () => {
       </nav>
       <Skills />
       <Projects />
+      <BlogList />
       <div className="link">
         <a href="https://github.com/Vickeysvibe">
           <img src={github} alt="" />
