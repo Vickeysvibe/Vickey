@@ -91,6 +91,7 @@
 @media only screen and (max-width: 999px) {
   .BlogList {
     .div {
+      opacity: 0.8;
       min-height: 200px;
       h1 {
         font-size: 15px;
@@ -112,6 +113,8 @@
   .Blog {
     .div1 {
       padding: 5px 0;
+      font-weight: 400;
+      font-size: 10px;
       span {
         margin-right: 10px;
         font-weight: 400;

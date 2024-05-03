@@ -129,6 +129,7 @@
   .project .grid div {
     overflow-y: scroll;
     margin: 0;
+    opacity: 0.8;
     padding: 20px;
     span {
       margin-bottom: 20px;
