@@ -7,12 +7,16 @@ import github from "../svgs/github.svg";
 import insta from "../svgs/insta.svg";
 import linkedin from "../svgs/linkedin.svg";
 import { BlogList } from "./BlogList";
+import fiverr from "../svgs/fiverr.svg";
+import { Link } from "react-router-dom";
 
 export const Info = () => {
   return (
     <div className="info">
       <nav>
-        <h1>Vibe</h1>
+        <Link to={"/"}>
+          <h1>Vibe</h1>
+        </Link>
         <img src={logo} alt="logo" />
       </nav>
       <Skills />
@@ -27,6 +31,9 @@ export const Info = () => {
         </a>
         <a href="https://www.linkedin.com/in/vigneshwaran-l-0b9004257/">
           <img src={linkedin} alt="" />
+        </a>
+        <a href="https://www.fiverr.com/vickeyss?up_rollout=true">
+          <img src={fiverr} alt="" />
         </a>
       </div>
     </div>

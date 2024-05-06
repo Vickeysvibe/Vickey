@@ -7,6 +7,7 @@ import { Info } from "./Info";
 import github from "../svgs/github.svg";
 import insta from "../svgs/insta.svg";
 import linkedin from "../svgs/linkedin.svg";
+import fiverr from "../svgs/fiverr.svg";
 import me from "../images/image.png";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
@@ -57,6 +58,9 @@ export function Layout() {
           </a>
           <a href="https://www.linkedin.com/in/vigneshwaran-l-0b9004257/">
             <img src={linkedin} alt="" />
+          </a>
+          <a href="https://www.fiverr.com/vickeyss?up_rollout=true">
+            <img src={fiverr} alt="" />
           </a>
         </div>
       </div>

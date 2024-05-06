@@ -29,6 +29,7 @@ export const Home = () => {
         <a href="https://www.linkedin.com/in/vigneshwaran-l-0b9004257/">
           Linkedin
         </a>
+        <a href="https://www.fiverr.com/vickeyss?up_rollout=true">Fiverr</a>
       </div>
     </div>
   );
