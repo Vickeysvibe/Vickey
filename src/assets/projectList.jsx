@@ -24,4 +24,10 @@ export default [
     desc: "Built a chatbot for Hotpack global to help customers with their queries which increased their customer satisfaction rate by 15%",
     link: "https://google",
   },
+  {
+    title: "Quote-o-Gram",
+    tech: "MERN - stack",
+    desc: "Text based social media to upload Quotes to all users and get likes and comments with JWT authentication and proper backend server",
+    link: "https://github.com/Vickeysvibe/Quote-o-gram",
+  },
 ];

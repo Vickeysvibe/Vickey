@@ -9,6 +9,7 @@ import linkedin from "../svgs/linkedin.svg";
 import { BlogList } from "./BlogList";
 import fiverr from "../svgs/fiverr.svg";
 import { Link } from "react-router-dom";
+import { Contact } from "./Contact";
 
 export const Info = () => {
   return (
@@ -22,6 +23,7 @@ export const Info = () => {
       <Skills />
       <Projects />
       <BlogList />
+      <Contact />
       <div className="link">
         <a href="https://github.com/Vickeysvibe">
           <img src={github} alt="" />

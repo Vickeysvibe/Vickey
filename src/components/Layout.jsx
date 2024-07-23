@@ -32,7 +32,7 @@ export function Layout() {
             </div>
             <h2>Hello, I'm Vigneshwaran</h2>
             <p>
-              Hey there! I'm your <span>friendly neighbourhood</span> full-stack{" "}
+              Your <span>friendly neighbourhood</span> full-stack{" "}
               <span>JavaScript </span> junkie, always hungry for new challenges!
               Whether I'm crushing code as a <span>full-stack developer</span>,
               soaking up knowledge as a <span>student</span>, or crafting

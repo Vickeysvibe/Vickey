@@ -88,6 +88,41 @@
   }
 }
 
+.contactForm {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #1b1b1d;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.7;
+  border-radius: 20px;
+  textarea {
+    height: 100px;
+    color: aliceblue;
+    border-radius: 10px;
+    font-size: 10px;
+    margin: 30px auto;
+    padding-top: 100px;
+    padding: 10px 10px;
+    width: 90%;
+    background-color: #151515;
+  }
+  button {
+    background-color: aliceblue;
+    height: 40px;
+    width: 20%;
+    margin-left: 40%;
+    color: #151515;
+    font-weight: 900;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
 @media only screen and (max-width: 999px) {
   .BlogList {
     .div {
