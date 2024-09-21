@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700);
+
+.boxxxx {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  max-width: 840px;
+  margin-inline: auto;
+}
+
+.grid div {
+  aspect-ratio: 0.01/0.01;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b1b1d;
+  border-radius: 20px;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.grid div:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.grid div img {
+  height: 50px;
+}
+
+.topic {
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  margin-left: 10%;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  color: aliceblue;
+  opacity: 1;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+}
+.skills {
+  width: 100%;
+}
+
+@media only screen and (max-width: 999px) {
+  .skills {
+    margin-top: -50px;
+    overflow-x: hidden;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 24px;
+    max-width: 840px;
+    margin-inline: auto;
+  }
+  .grid div {
+    aspect-ratio: 0.1/0.1;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1b1b1d;
+    border-radius: 10px;
+    opacity: 0.8;
+    transition: 0.5s;
+  }
+
+  .grid div img {
+    height: 40px;
+  }
+}
