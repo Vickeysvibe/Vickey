@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "../css/home.css";
-import me from "../images/image.png";
+import me from "../images/meee.png";
 import { Quote } from "./Quote.jsx";
 export const Home = () => {
   return (

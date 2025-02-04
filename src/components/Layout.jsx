@@ -9,6 +9,7 @@ import insta from "../svgs/insta.svg";
 import linkedin from "../svgs/linkedin.svg";
 import fiverr from "../svgs/fiverr.svg";
 import me from "../images/image.png";
+import meee from "../images/meee.png";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
 import { Quote } from "./Quote";
@@ -28,16 +29,17 @@ export function Layout() {
         <div className="container">
           <div className="content">
             <div className="image">
-              <img src={me} alt="moonji" />
+              <img src={meee} alt="moonji" />
             </div>
             <h2>Hello, I'm Vigneshwaran</h2>
             <p>
-              Your <span>friendly neighbourhood</span> full-stack{" "}
-              <span>JavaScript </span> junkie, always hungry for new challenges!
-              Whether I'm crushing code as a <span>full-stack developer</span>,
-              soaking up knowledge as a <span>student</span>, or crafting
-              conversational magic with <span>chatbots</span>, one thing's for
-              sure – I live, breathe, <span>hate and love JS</span>
+              Your friendly neighborhood <span>full-stack developer</span>,
+              always up for a challenge! Whether I’m <span>coding</span> as a
+              full-stack dev, learning something new as a <span>student</span>,
+              or crafting <span>chatbots </span>, I live and breathe{" "}
+              <span>JavaScript </span>
+              with all the <span>ups</span> and <span>downs</span> that come
+              with it!.
             </p>
             <div className="but">
               <Link to={"/works"}>
