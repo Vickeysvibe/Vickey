@@ -10,6 +10,7 @@ import { BlogList } from "./BlogList";
 import fiverr from "../svgs/fiverr.svg";
 import { Link } from "react-router-dom";
 import { Contact } from "./Contact";
+import { motion } from "framer-motion";
 
 export const Info = () => {
   return (
@@ -20,7 +21,9 @@ export const Info = () => {
         </Link>
         <img src={logo} alt="logo" />
       </nav>
-      <Skills />
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+        <Skills />
+      </motion.div>
       <Projects />
       <BlogList />
       <Contact />

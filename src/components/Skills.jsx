@@ -8,7 +8,7 @@ import mongodb from "../svgs/mongodb.svg";
 import next from "../svgs/next.svg";
 import python from "../svgs/python.svg";
 import sql from "../svgs/sql.svg";
-import figma from "../svgs/figma.svg";
+import blender from "../svgs/blender.svg";
 export const Skills = () => {
   return (
     <div className="skills">
@@ -37,7 +37,7 @@ export const Skills = () => {
             <img src={sql} alt="react" />
           </div>
           <div>
-            <img src={figma} alt="react" />
+            <img src={blender} alt="react" />
           </div>
         </div>
       </div>

@@ -21,7 +21,7 @@
   justify-content: center;
   background-color: #1b1b1d;
   border-radius: 20px;
-  opacity: 0.5;
+  opacity: 0.6;
   transition: 0.5s;
 }
 .grid div:hover {

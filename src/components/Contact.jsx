@@ -21,6 +21,8 @@ export const Contact = () => {
             setMessage(e.target.value);
           }}
           placeholder="Message"
+          rows={10}
+          cols={50}
         />
         <button type="submit">Submit</button>
       </form>
