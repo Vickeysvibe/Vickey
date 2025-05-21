@@ -30,4 +30,15 @@ export default [
     desc: "Text based social media to upload Quotes to all users and get likes and comments with JWT authentication and proper backend server",
     link: "https://github.com/Vickeysvibe/Quote-o-gram",
   },
+  {
+    title: "ClientsBridge - backend intern",
+    tech: "MERN - stack, socket.io",
+    desc: "Freelancing platform for freelancers and companies to connect with clients, Real time chat, role based auth, Scalable backend architecture",
+  },
+  {
+    title: "ConstructEase",
+    tech: "MERN - stack, Excel.js, puppeteer",
+    desc: "A construction and site management palatform for multiple construction companies to manage their sites, contractors, vendors and products",
+    link: "https://github.com/Vickeysvibe/ConstructEaseBackend",
+  },
 ];

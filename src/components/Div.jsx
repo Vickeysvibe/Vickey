@@ -9,10 +9,12 @@ export const Div = (props) => {
         <h6>{props.props.tech}</h6>
       </span>
       <p>{props.props.desc}</p>
-      <a href={props.props.link}>
-        <img src={eye} alt="eye" />
-        <span>link</span>
-      </a>
+      {props.props.link && (
+        <a href={props.props.link}>
+          <img src={eye} alt="eye" />
+          <span>link</span>
+        </a>
+      )}
     </div>
   );
 };
