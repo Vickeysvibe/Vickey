@@ -18,12 +18,7 @@ export default [
     desc: "A 2-way E-Commerce platform used to sell and buy products with a focus on the user experience",
     link: "https://v-commerce.vercel.app",
   },
-  {
-    title: "Customer service chatbot",
-    tech: "Kore.ai",
-    desc: "Built a chatbot for Hotpack global to help customers with their queries which increased their customer satisfaction rate by 15%",
-    link: "https://google",
-  },
+
   {
     title: "Quote-o-Gram",
     tech: "MERN - stack",

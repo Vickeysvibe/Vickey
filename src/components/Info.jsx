@@ -11,6 +11,7 @@ import fiverr from "../svgs/fiverr.svg";
 import { Link } from "react-router-dom";
 import { Contact } from "./Contact";
 import { motion } from "framer-motion";
+import { Experiences } from "./Experiences";
 
 export const Info = () => {
   return (
@@ -25,6 +26,7 @@ export const Info = () => {
         <Skills />
       </motion.div>
       <Projects />
+      <Experiences />
       <BlogList />
       <Contact />
       <div className="link">
