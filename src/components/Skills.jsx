@@ -17,27 +17,35 @@ export const Skills = () => {
         <div className="grid">
           <div>
             <img src={react} alt="react" />
+            <h5>React.js</h5>
           </div>
           <div>
             <img src={node} alt="react" />
+            <h5>Node.js</h5>
           </div>
           <div>
             <img src={next} alt="react" />
+            <h5>Next.js</h5>
           </div>
           <div>
             <img src={python} alt="react" />
+            <h5>Python</h5>
           </div>
           <div>
             <img src={mongodb} alt="react" />
+            <h5>MongoDB</h5>
           </div>
           <div>
             <img src={js} alt="react" />
+            <h5>JavaScript</h5>
           </div>
           <div>
             <img src={sql} alt="react" />
+            <h5>SQL</h5>
           </div>
           <div>
             <img src={blender} alt="react" />
+            <h5>Blender</h5>
           </div>
         </div>
       </div>

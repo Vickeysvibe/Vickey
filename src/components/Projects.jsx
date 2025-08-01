@@ -8,8 +8,8 @@ export const Projects = () => {
       <h1 className="topic">Projects</h1>
       <div className="boxxxx">
         <div className="grid">
-          {projectList.map((items) => (
-            <Div key={Math.random()} props={items} />
+          {projectList.map((item) => (
+            <Div key={item.title} props={item} />
           ))}
         </div>
       </div>

@@ -10,4 +10,9 @@ export default [
     tech: "MERN - stack, socket.io",
     desc: "Led backend development team for a Freelancing platform for freelancers and companies to connect with clients, Real time chat, role based auth, Scalable backend architecture",
   },
+  {
+    title: "Project intern",
+    tech: "Tata Consultancy Services ( TCS )",
+    desc: "Developed a full stack platform for presenting and managing professional offerings and presentation analysis and reviews ",
+  },
 ];
