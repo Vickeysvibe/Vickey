@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&display=swap");
+
+/* Minimal reset (replaces the Tailwind play-CDN preflight we used to load at runtime) */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border: 0 solid;
+}
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+ul {
+  list-style: none;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+}
+button {
+  cursor: pointer;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Base */
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  color: aliceblue;
+  background-color: #151515;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hide scrollbars everywhere; scrolling still works */
+* {
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Section heading shared by every section in Info */
+.topic {
+  margin: 80px 10% 30px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cursor-dot {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0;
+}
+
+@media (hover: none) {
+  .cursor-dot {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .topic {
+    margin-top: 40px;
+  }
+}

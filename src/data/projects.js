@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/no-anonymous-default-export
-export default [
+const projects = [
   {
     title: "SAHA Travel Buddy",
     tech: "Kore.ai , HTML , CSS",
@@ -37,3 +36,5 @@ export default [
     link: "https://github.com/Vickeysvibe/ConstructEaseBackend",
   },
 ];
+
+export default projects;

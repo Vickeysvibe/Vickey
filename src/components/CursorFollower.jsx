@@ -1,59 +1,45 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
+const SPEED = 0.1; // lower = smoother and slower
+
+// Animates via a ref instead of state so the dot doesn't re-render React on
+// every frame. Disabled on touch devices, where there is no cursor to follow.
 const CursorFollower = () => {
-  // Store mouse position and dot position as state
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [dotPos, setDotPos] = useState({ x: 0, y: 0 });
+  const dotRef = useRef(null);
 
   useEffect(() => {
-    // Update mouse position on mouse move
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      return;
+    }
+
+    const dot = dotRef.current;
+    const target = { x: 0, y: 0 };
+    const pos = { x: 0, y: 0 };
+    let frameId;
+
     const handleMouseMove = (event) => {
-      setMousePos({ x: event.clientX, y: event.clientY });
+      target.x = event.clientX;
+      target.y = event.clientY;
+      dot.style.opacity = "1";
+    };
+
+    const tick = () => {
+      pos.x += (target.x - pos.x) * SPEED;
+      pos.y += (target.y - pos.y) * SPEED;
+      dot.style.transform = `translate3d(${pos.x}px, ${pos.y}px, 0)`;
+      frameId = requestAnimationFrame(tick);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
+    frameId = requestAnimationFrame(tick);
 
-    // Cleanup on component unmount
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      cancelAnimationFrame(frameId);
+    };
   }, []);
 
-  useEffect(() => {
-    let animationFrameId;
-
-    const speed = 0.1; // Adjust the smoothness factor (lower = smoother and slower)
-
-    const updateDotPosition = () => {
-      setDotPos((prevPos) => ({
-        x: prevPos.x + (mousePos.x - prevPos.x) * speed,
-        y: prevPos.y + (mousePos.y - prevPos.y) * speed,
-      }));
-
-      animationFrameId = requestAnimationFrame(updateDotPosition);
-    };
-
-    // Start the animation
-    animationFrameId = requestAnimationFrame(updateDotPosition);
-
-    // Cleanup on component unmount
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [mousePos]);
-
-  return (
-    <div
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "10px",
-        height: "10px",
-        backgroundColor: "white",
-        zIndex: 1000,
-        borderRadius: "50%",
-        transform: `translate(${dotPos.x}px, ${dotPos.y}px)`,
-        pointerEvents: "none", // Prevent interaction with the dot
-      }}
-    />
-  );
+  return <div ref={dotRef} className="cursor-dot" aria-hidden="true" />;
 };
 
 export default CursorFollower;

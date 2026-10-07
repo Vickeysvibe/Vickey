@@ -1,0 +1,54 @@
+.contact {
+  margin-bottom: 50px;
+}
+.contactForm {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 5% 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #1b1b1d;
+  border-radius: 20px;
+  opacity: 0.6;
+  transition: opacity 0.5s;
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #151515;
+  }
+  textarea {
+    resize: none;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: #6b7280;
+  }
+  button {
+    align-self: center;
+    min-width: 120px;
+    height: 40px;
+    padding: 0 24px;
+    border-radius: 10px;
+    font-weight: 900;
+    color: #151515;
+    background-color: aliceblue;
+  }
+  button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+  }
+}
+/* Stay readable while the visitor is typing, not just while hovering */
+.contactForm:hover,
+.contactForm:focus-within {
+  opacity: 1;
+}
+.form-status {
+  min-height: 1.5em; /* reserve space so the form doesn't jump */
+  font-size: 12px;
+  text-align: center;
+}

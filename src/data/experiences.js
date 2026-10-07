@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/no-anonymous-default-export
-export default [
+const experiences = [
   {
     title: "Customer service chatbot",
     tech: "Kore.ai",
@@ -11,3 +10,5 @@ export default [
     desc: "Led backend development team for a Freelancing platform for freelancers and companies to connect with clients, Real time chat, role based auth, Scalable backend architecture",
   },
 ];
+
+export default experiences;

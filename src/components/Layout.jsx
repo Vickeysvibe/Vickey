@@ -1,17 +1,13 @@
-/* eslint-disable react/no-unescaped-entities */
-// eslint-disable-next-line no-unused-vars
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import "../css/layout.css";
+import me from "../images/meee.png";
+import { Bio } from "./Bio";
 import { Home } from "./Home";
 import { Info } from "./Info";
-import github from "../svgs/github.svg";
-import insta from "../svgs/insta.svg";
-import linkedin from "../svgs/linkedin.svg";
-import fiverr from "../svgs/fiverr.svg";
-import meee from "../images/meee.png";
-import { Link } from "react-router-dom";
-import logo from "../images/logo.png";
+import { Navbar } from "./Navbar";
 import { Quote } from "./Quote";
+import { SocialLinks } from "./SocialLinks";
 
 export function Layout() {
   return (
@@ -21,52 +17,22 @@ export function Layout() {
         <Info />
       </div>
       <div className="mobileLayout">
-        <nav>
-          <h1>Vibe</h1>
-          <img src={logo} alt="logo" />
-        </nav>
-        <div className="containerF">
-          <div className="content">
-            <div className="image">
-              <img src={meee} alt="moonji" />
-            </div>
-            <div className="pilex">
-              <h2>
-                Hello, I'm <div>vickey</div>
-              </h2>
-            </div>
-            <p>
-              Your friendly neighborhood <span>full-stack developer</span>,
-              always up for a challenge! Whether I’m <span>coding</span> as a
-              full-stack dev, learning something new as a <span>student</span>,
-              or crafting <span>chatbots </span>, I live and breathe{" "}
-              <span>JavaScript </span>
-              with all the <span>ups</span> and <span>downs</span> that come
-              with it!.
-            </p>
-            <div className="but">
-              <Link to={"/works"}>
-                <button>Explore {">"}</button>
-              </Link>
-            </div>
-          </div>
-        </div>
+        <Navbar />
+        <main className="hero">
+          <img src={me} alt="Vigneshwaran" />
+          <h2>
+            Hello, I'm <span>vickey</span>
+          </h2>
+          <Bio />
+          <Link to="/works" className="explore">
+            Explore {">"}
+          </Link>
+        </main>
         <div className="qt">
           <Quote />
         </div>
-        <div className="link">
-          <a href="https://github.com/Vickeysvibe">
-            <img src={github} alt="" />
-          </a>
-          <a href="https://www.instagram.com/vickeys_vibe/">
-            <img src={insta} alt="" />
-          </a>
-          <a href="https://www.linkedin.com/in/vigneshwaran-l-0b9004257/">
-            <img src={linkedin} alt="" />
-          </a>
-          <a href="https://www.fiverr.com/vickeyss?up_rollout=true">
-            <img src={fiverr} alt="" />
-          </a>
+        <div className="social-icons">
+          <SocialLinks icons />
         </div>
       </div>
     </>

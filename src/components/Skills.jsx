@@ -1,46 +1,16 @@
-/* eslint-disable no-unused-vars */
 import React from "react";
-import "../css/skills.css";
-import react from "../svgs/react.svg";
-import js from "../svgs/js.svg";
-import node from "../svgs/node.svg";
-import mongodb from "../svgs/mongodb.svg";
-import next from "../svgs/next.svg";
-import python from "../svgs/python.svg";
-import sql from "../svgs/sql.svg";
-import blender from "../svgs/blender.svg";
-export const Skills = () => {
-  return (
-    <div className="skills">
-      <h1 className="topic">Skills</h1>
-      <div className="boxxxx">
-        <div className="grid">
-          <div>
-            <img src={react} alt="react" />
-          </div>
-          <div>
-            <img src={node} alt="react" />
-          </div>
-          <div>
-            <img src={next} alt="react" />
-          </div>
-          <div>
-            <img src={python} alt="react" />
-          </div>
-          <div>
-            <img src={mongodb} alt="react" />
-          </div>
-          <div>
-            <img src={js} alt="react" />
-          </div>
-          <div>
-            <img src={sql} alt="react" />
-          </div>
-          <div>
-            <img src={blender} alt="react" />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+import "../css/sections.css";
+import skills from "../data/skills";
+
+export const Skills = () => (
+  <section>
+    <h1 className="topic">Skills</h1>
+    <ul className="section-body skill-grid">
+      {skills.map(({ name, icon }) => (
+        <li key={name} title={name}>
+          <img src={icon} alt={name} />
+        </li>
+      ))}
+    </ul>
+  </section>
+);
