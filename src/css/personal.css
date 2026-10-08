@@ -1,0 +1,55 @@
+.personal {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-intro {
+  padding: 48px 5% 40px;
+  h1 {
+    margin: 24px 0 12px;
+    font-size: 64px;
+    line-height: 1.1;
+  }
+  p {
+    max-width: 34rem;
+    font-size: 15px;
+    color: rgb(100, 100, 100);
+  }
+}
+
+.back-link {
+  font-size: 13px;
+  color: #8b8b8b;
+  transition: color 0.3s;
+}
+.back-link:hover {
+  color: aliceblue;
+}
+
+.personal-body {
+  flex: 1;
+  padding: 0 5% 40px;
+}
+.personal-empty {
+  padding: 80px 0;
+  text-align: center;
+  color: #6b6b6b;
+}
+
+@media only screen and (max-width: 999px) {
+  .personal-intro {
+    padding: 32px 6% 28px;
+    h1 {
+      font-size: 48px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .personal-body {
+    padding: 0 6% 32px;
+  }
+}

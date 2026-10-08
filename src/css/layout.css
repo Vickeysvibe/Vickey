@@ -1,0 +1,117 @@
+/* Shared bio paragraph */
+.bio {
+  color: rgb(100, 100, 100);
+  span {
+    color: rgb(218, 218, 218);
+  }
+}
+
+/* ---------- Desktop: fixed intro column + scrolling Info column ---------- */
+.layout {
+  height: 100dvh;
+  width: 80vw;
+  display: flex;
+}
+
+.home {
+  height: 100%;
+  min-width: 40%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 5%;
+  overflow-y: auto;
+}
+.about {
+  h1 {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  .bio {
+    padding: 20px 0;
+    font-size: 15px;
+  }
+}
+.thoughts {
+  width: 100%;
+}
+.links {
+  display: flex;
+  align-items: center;
+  margin-left: -5%;
+  img {
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 15px;
+  }
+  a {
+    margin: 0 15px;
+    opacity: 0.6;
+    transition: opacity 0.5s;
+  }
+  a:hover {
+    opacity: 1;
+  }
+}
+
+/* ---------- Mobile landing page ---------- */
+.mobileLayout {
+  display: none;
+  flex: 1;
+  min-height: 100dvh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  img {
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin: 20px 0;
+  }
+  h2 {
+    margin: 20px 0;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.3;
+    span {
+      display: block;
+      color: #eee;
+    }
+  }
+  .bio {
+    margin: 20px 0;
+    font-size: 14px;
+  }
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+.rise-late {
+  animation: rise 0.7s var(--ease-out) 450ms backwards;
+}
+.qt {
+  padding: 0 6% 4vh;
+}
+
+@media only screen and (max-width: 999px) {
+  .layout {
+    display: none;
+  }
+  .mobileLayout {
+    display: flex;
+  }
+}

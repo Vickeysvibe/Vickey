@@ -1,0 +1,126 @@
+.section-body {
+  width: 80%;
+  max-width: 840px;
+  margin: 0 auto 20px;
+  display: grid;
+  gap: 15px;
+}
+
+/* Shared tile look for skills and cards */
+.skill-grid li,
+.card {
+  background-color: #1b1b1d;
+  border-radius: 20px;
+  opacity: 0.6;
+  transition: transform 0.5s, opacity 0.5s;
+}
+/* Hover only on real pointers so taps don't leave cards stuck "zoomed" */
+@media (hover: hover) {
+  .skill-grid li:hover,
+  .card:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* ---------- Skills ---------- */
+.skill-grid {
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  li {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  img {
+    height: 50px;
+    width: auto;
+  }
+}
+
+/* ---------- Project / experience cards ---------- */
+.card-grid {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+.card {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  /* Fixed-height, line-clamped rows keep every card the same size */
+  h3,
+  p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  h3 {
+    font-size: 22px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+    line-height: 1.2;
+    height: calc(2 * 1.2em);
+    -webkit-line-clamp: 2;
+  }
+  h6 {
+    font-size: 11px;
+    line-height: 1.5;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  p {
+    font-size: 13px;
+    line-height: 1.5;
+    height: calc(4 * 1.5em);
+    margin: 16px 0;
+    -webkit-line-clamp: 4;
+  }
+  .card-link {
+    height: 20px;
+  }
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    img {
+      height: 10px;
+      width: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .section-body {
+    gap: 24px;
+  }
+  .skill-grid li,
+  .card {
+    opacity: 0.8;
+  }
+  .skill-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    li {
+      border-radius: 10px;
+    }
+    img {
+      height: 40px;
+    }
+  }
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 24px;
+    h3 {
+      font-size: 20px;
+    }
+    h6 {
+      font-size: 12px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
