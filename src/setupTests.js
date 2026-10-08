@@ -2,7 +2,7 @@
 // learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom";
 
-// jsdom implements neither matchMedia nor IntersectionObserver.
+// jsdom implements none of matchMedia, IntersectionObserver or ResizeObserver.
 window.matchMedia ??= (query) => ({
   matches: false,
   media: query,
@@ -13,6 +13,12 @@ window.matchMedia ??= (query) => ({
 });
 
 window.IntersectionObserver ??= class {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+};
+
+window.ResizeObserver ??= class {
   observe() {}
   unobserve() {}
   disconnect() {}

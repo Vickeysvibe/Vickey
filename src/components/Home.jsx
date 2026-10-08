@@ -1,7 +1,7 @@
 import React from "react";
 import me from "../images/meee.png";
 import { Bio } from "./Bio";
-import { Quote } from "./Quote";
+import { ContributionCalendar } from "./ContributionCalendar";
 import { SocialLinks } from "./SocialLinks";
 
 // Left column of the desktop layout.
@@ -13,7 +13,7 @@ export const Home = () => (
       <Bio />
     </div>
     <div className="thoughts">
-      <Quote />
+      <ContributionCalendar />
     </div>
     <div className="links">
       <img src={me} alt="Vigneshwaran" />

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import "../css/layout.css";
 import me from "../images/meee.png";
 import { Bio } from "./Bio";
+import { ContributionCalendar } from "./ContributionCalendar";
 import { Home } from "./Home";
 import { Info } from "./Info";
 import { Navbar } from "./Navbar";
-import { Quote } from "./Quote";
 import { SocialLinks } from "./SocialLinks";
 
 export function Layout() {
@@ -29,7 +29,7 @@ export function Layout() {
           </Link>
         </main>
         <div className="qt">
-          <Quote />
+          <ContributionCalendar />
         </div>
         <div className="social-icons">
           <SocialLinks icons />
