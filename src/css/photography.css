@@ -5,21 +5,24 @@
   column-width: 240px;
   column-gap: 12px;
 }
+/* Reveal wrapper is the masonry item, so it must not split across columns */
+.photo-cell {
+  break-inside: avoid;
+  margin-bottom: 12px;
+}
 .photo {
   position: relative;
   display: block;
   width: 100%;
-  margin-bottom: 12px;
   padding: 0;
   overflow: hidden;
   border-radius: 14px;
   background-color: #1b1b1d;
-  break-inside: avoid;
   cursor: zoom-in;
   img {
     width: 100%;
     opacity: 0.75;
-    transition: opacity 0.5s, transform 0.6s;
+    transition: opacity 0.5s var(--ease-out), transform 0.6s var(--ease-out);
   }
 }
 .photo:focus-visible {
@@ -75,6 +78,7 @@
     cursor: default;
   }
   img {
+    animation: photo-in 0.35s var(--ease-out) backwards;
     max-width: 100%;
     max-height: calc(100dvh - 160px);
     width: auto;
@@ -120,6 +124,12 @@
 .lightbox-nav.next {
   right: 8px;
 }
+@keyframes photo-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
 @keyframes lightbox-in {
   from {
     opacity: 0;
@@ -137,8 +147,10 @@
     column-width: auto;
     column-gap: 10px;
   }
-  .photo {
+  .photo-cell {
     margin-bottom: 10px;
+  }
+  .photo {
     border-radius: 10px;
   }
   /* Swipe to navigate on phones; arrows stay as a fallback at the bottom */

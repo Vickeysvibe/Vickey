@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../css/contact.css";
+import { Reveal } from "./Reveal";
 
 const FORM_ENDPOINT = "https://formspree.io/f/xvgrpnan";
 const EMPTY_FORM = { email: "", message: "" };
@@ -39,33 +40,37 @@ export const Contact = () => {
 
   return (
     <section className="contact">
-      <h1 className="topic">Contact me</h1>
-      <form onSubmit={handleSubmit} className="contactForm">
-        <input
-          type="email"
-          name="email"
-          value={form.email}
-          onChange={handleChange}
-          placeholder="Your email"
-          aria-label="Your email"
-          required
-        />
-        <textarea
-          name="message"
-          value={form.message}
-          onChange={handleChange}
-          placeholder="Message"
-          aria-label="Message"
-          rows={5}
-          required
-        />
-        <button type="submit" disabled={status === "sending"}>
-          Submit
-        </button>
-        <p className="form-status" role="status">
-          {STATUS_TEXT[status]}
-        </p>
-      </form>
+      <Reveal>
+        <h1 className="topic">Contact me</h1>
+      </Reveal>
+      <Reveal>
+        <form onSubmit={handleSubmit} className="contactForm">
+          <input
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="Your email"
+            aria-label="Your email"
+            required
+          />
+          <textarea
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            placeholder="Message"
+            aria-label="Message"
+            rows={5}
+            required
+          />
+          <button type="submit" disabled={status === "sending"}>
+            Submit
+          </button>
+          <p className="form-status" role="status">
+            {STATUS_TEXT[status]}
+          </p>
+        </form>
+      </Reveal>
     </section>
   );
 };

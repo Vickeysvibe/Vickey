@@ -1,12 +1,12 @@
 import React from "react";
-import { motion } from "framer-motion";
 import "../css/info.css";
-import experiences from "../data/experiences";
 import projects from "../data/projects";
 import { BlogList } from "./BlogList";
 import { CardSection } from "./CardSection";
 import { Contact } from "./Contact";
+import { Experience } from "./Experience";
 import { Navbar } from "./Navbar";
+import { Reveal } from "./Reveal";
 import { Skills } from "./Skills";
 import { SocialLinks } from "./SocialLinks";
 
@@ -15,11 +15,11 @@ import { SocialLinks } from "./SocialLinks";
 export const Info = ({ standalone = false }) => (
   <div className={standalone ? "info info-page" : "info"}>
     {standalone && <Navbar />}
-    <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+    <Reveal>
       <Skills />
-    </motion.div>
+    </Reveal>
     <CardSection title="Projects" items={projects} />
-    <CardSection title="Professional Experiences" items={experiences} />
+    <Experience />
     <BlogList />
     <Contact />
     {standalone && (

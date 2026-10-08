@@ -39,24 +39,6 @@
   color: #6b6b6b;
 }
 
-/* Entry points from the professional pages */
-.personal-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  border: 1px solid rgba(240, 248, 255, 0.2);
-  border-radius: 999px;
-  font-size: 13px;
-  color: #a5a5a5;
-  transition: color 0.3s, border-color 0.3s;
-}
-.personal-link:hover,
-.personal-link:focus-visible {
-  color: aliceblue;
-  border-color: rgba(240, 248, 255, 0.5);
-}
-
 @media only screen and (max-width: 999px) {
   .personal-intro {
     padding: 32px 6% 28px;

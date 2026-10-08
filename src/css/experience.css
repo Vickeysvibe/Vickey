@@ -1,0 +1,152 @@
+/* ---------- Timeline ---------- */
+.timeline {
+  position: relative;
+  gap: 16px;
+  padding-left: 28px;
+}
+/* The vertical rail */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 5px;
+  width: 1px;
+  background: linear-gradient(
+    rgba(240, 248, 255, 0.25),
+    rgba(240, 248, 255, 0.04)
+  );
+}
+
+.xp {
+  position: relative;
+}
+.xp-dot {
+  position: absolute;
+  top: 30px;
+  left: -28px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #3a3a3d;
+  box-shadow: 0 0 0 3px #151515;
+  transition: background-color 0.3s;
+}
+.xp:hover .xp-dot {
+  background-color: #8b8b8b;
+}
+.xp-current .xp-dot,
+.xp-current:hover .xp-dot {
+  background-color: aliceblue;
+}
+/* Soft pulse for the role you're in now */
+.xp-current .xp-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid aliceblue;
+  animation: xp-pulse 2.4s var(--ease-out) infinite;
+}
+@keyframes xp-pulse {
+  from {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(2.6);
+  }
+}
+
+/* ---------- Card ---------- */
+.xp-card {
+  padding: 24px 28px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background-color: #1b1b1d;
+  opacity: 0.75;
+  transition: opacity 0.4s var(--ease-out), border-color 0.4s,
+    transform 0.4s var(--ease-out);
+  p {
+    margin-top: 14px;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #a5a5a5;
+  }
+}
+@media (hover: hover) {
+  .xp:hover .xp-card {
+    opacity: 1;
+    border-color: rgba(240, 248, 255, 0.08);
+    transform: translateX(4px);
+  }
+}
+
+.xp-head h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.xp-company {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #a5a5a5;
+}
+a.xp-company {
+  transition: color 0.3s;
+}
+a.xp-company:hover,
+a.xp-company:focus-visible {
+  color: aliceblue;
+}
+.xp-company-arrow {
+  font-size: 12px;
+  transition: transform 0.3s var(--ease-out);
+}
+a.xp-company:hover .xp-company-arrow,
+a.xp-company:focus-visible .xp-company-arrow {
+  transform: translate(2px, -2px);
+}
+
+.xp-when {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #8b8b8b;
+}
+.xp-duration {
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: aliceblue;
+  background-color: rgba(240, 248, 255, 0.07);
+}
+
+@media only screen and (max-width: 999px) {
+  .timeline {
+    padding-left: 22px;
+  }
+  .xp-dot {
+    left: -22px;
+    top: 26px;
+  }
+  .xp-card {
+    padding: 20px;
+    opacity: 0.85;
+    p {
+      font-size: 14px;
+    }
+  }
+  .xp-head h3 {
+    font-size: 18px;
+  }
+}

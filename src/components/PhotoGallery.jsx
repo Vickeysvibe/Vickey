@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import "../css/photography.css";
+import { Reveal } from "./Reveal";
 
 const SWIPE_PX = 50;
 
@@ -108,16 +109,17 @@ export const PhotoGallery = ({ photos }) => {
     <>
       <div className="photo-grid">
         {photos.map(({ src, caption }, i) => (
-          <button
-            key={src}
-            type="button"
-            className="photo"
-            onClick={() => setOpenIndex(i)}
-            aria-label={`Open ${caption || "photo"}`}
-          >
-            <img src={src} alt={caption} loading="lazy" decoding="async" />
-            {caption && <span className="photo-caption">{caption}</span>}
-          </button>
+          <Reveal key={src} className="photo-cell" delay={(i % 4) * 0.06}>
+            <button
+              type="button"
+              className="photo"
+              onClick={() => setOpenIndex(i)}
+              aria-label={`Open ${caption || "photo"}`}
+            >
+              <img src={src} alt={caption} loading="lazy" decoding="async" />
+              {caption && <span className="photo-caption">{caption}</span>}
+            </button>
+          </Reveal>
         ))}
       </div>
       {openIndex !== null && (

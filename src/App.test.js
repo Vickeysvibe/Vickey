@@ -21,7 +21,7 @@ test("renders the personal page on /personal", () => {
   window.history.pushState({}, "", "/personal");
   render(<App />);
   expect(
-    screen.getByRole("heading", { name: "Through my lens" }),
+    screen.getByRole("heading", { name: "Off the clock" }),
   ).toBeInTheDocument();
   expect(screen.getByText("Photos coming soon.")).toBeInTheDocument();
   window.history.pushState({}, "", "/");

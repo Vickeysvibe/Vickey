@@ -10,14 +10,14 @@ import { SocialLinks } from "./SocialLinks";
 export const Personal = () => (
   <div className="personal">
     <Navbar />
-    <header className="personal-intro">
+    <header className="personal-intro stagger">
       <Link to="/" className="back-link">
         ← Back to work
       </Link>
-      <h1 className="name">Through my lens</h1>
+      <h1 className="name">Off the clock</h1>
       <p>
-        Away from the keyboard I chase light with a camera. These are a few
-        frames I took and liked.
+        Snaps of whatever I'm up to when I'm not shipping code. No theme, no
+        plan. I just do things.
       </p>
     </header>
     <main className="personal-body">

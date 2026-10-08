@@ -34,6 +34,9 @@
   aspect-ratio: 1;
   border-radius: 2px;
   background-color: #2a2a2d;
+  /* When data arrives, columns light up left to right */
+  transition: background-color 0.5s var(--ease-out);
+  transition-delay: calc(var(--col, 0) * 12ms);
 }
 .contrib-cell.level-1 {
   background-color: rgba(240, 248, 255, 0.22);

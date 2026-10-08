@@ -103,10 +103,11 @@ export const ContributionCalendar = () => {
         role="img"
         aria-label={heading}
       >
-        {days.map((day) => (
+        {days.map((day, i) => (
           <span
             key={day.date}
             className={`contrib-cell level-${day.level}`}
+            style={{ "--col": Math.floor(i / 7) }}
             title={loading ? undefined : describeDay(day)}
           />
         ))}
