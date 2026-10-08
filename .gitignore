@@ -24,3 +24,6 @@ yarn-error.log*
 
 # env files hold secrets
 .env
+
+# full-size photo originals (resized copies live in src/photos)
+/src/photos-originals

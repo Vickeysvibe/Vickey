@@ -25,3 +25,6 @@ window.ResizeObserver ??= class {
 };
 
 window.scrollTo = () => {};
+
+// data/photos uses webpack's require.context, which Jest doesn't provide.
+jest.mock("./data/photos", () => ({ __esModule: true, default: [] }));

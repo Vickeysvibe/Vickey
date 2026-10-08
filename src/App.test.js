@@ -3,7 +3,9 @@ import App from "./App";
 
 test("renders the intro and every section", () => {
   render(<App />);
-  expect(screen.getByText(/I'm Vigneshwaran/i)).toBeInTheDocument();
+  expect(
+    screen.getByRole("heading", { name: /I'm Vigneshwaran/i }),
+  ).toBeInTheDocument();
   for (const heading of [
     "Skills",
     "Projects",
@@ -13,4 +15,14 @@ test("renders the intro and every section", () => {
   ]) {
     expect(screen.getByRole("heading", { name: heading })).toBeInTheDocument();
   }
+});
+
+test("renders the personal page on /personal", () => {
+  window.history.pushState({}, "", "/personal");
+  render(<App />);
+  expect(
+    screen.getByRole("heading", { name: "Through my lens" }),
+  ).toBeInTheDocument();
+  expect(screen.getByText("Photos coming soon.")).toBeInTheDocument();
+  window.history.pushState({}, "", "/");
 });

@@ -14,6 +14,7 @@ npm run build    # production build in ./build
 | Path | What |
 | --- | --- |
 | `src/data/` | Content: projects, experiences, blog posts, skills, social links |
+| `src/photos/` | Your photography: drop images here and they appear in the gallery (see the README inside) |
 | `src/components/` | UI. `Layout` = desktop split view + mobile landing, `Info` = all sections |
 | `src/css/` | One stylesheet per area. Mobile breakpoint is `max-width: 999px` everywhere (mirrored in `hooks/useMediaQuery.js`) |
 

@@ -3,6 +3,7 @@ import { Blog } from "./components/Blog";
 import CursorFollower from "./components/CursorFollower";
 import { Info } from "./components/Info";
 import { Layout } from "./components/Layout";
+import { Personal } from "./components/Personal";
 import { ScrollToTop } from "./components/ScrollToTop";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Layout />} />
           <Route path="/works" element={<Info standalone />} />
           <Route path="/blog/:slug" element={<Blog />} />
+          <Route path="/personal" element={<Personal />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&family=Satisfy&display=swap");
 
 /* Minimal reset (replaces the Tailwind play-CDN preflight we used to load at runtime) */
 *,
@@ -75,6 +75,12 @@ body {
 }
 ::-webkit-scrollbar {
   display: none;
+}
+
+/* Handwritten name, in the spirit of the macOS "hello" lettering */
+.name {
+  font-family: "Satisfy", cursive;
+  font-weight: 400; /* the font has one weight; avoid faux-bold */
 }
 
 /* Section heading shared by every section in Info */

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import me from "../images/meee.png";
 import { Bio } from "./Bio";
 import { ContributionCalendar } from "./ContributionCalendar";
@@ -9,8 +10,13 @@ export const Home = () => (
   <div className="home">
     <div className="about">
       <h1>Hello There,</h1>
-      <h1>I'm Vigneshwaran</h1>
+      <h1>
+        I'm <span className="name">Vigneshwaran</span>
+      </h1>
       <Bio />
+      <Link to="/personal" className="personal-link">
+        Off the clock: photography →
+      </Link>
     </div>
     <div className="thoughts">
       <ContributionCalendar />
