@@ -5,6 +5,7 @@ import { Bio } from "./Bio";
 import { ContributionCalendar } from "./ContributionCalendar";
 import { Home } from "./Home";
 import { Info } from "./Info";
+import { Loader } from "./Loader";
 import { Navbar } from "./Navbar";
 import { PillLink } from "./PillLink";
 import { SocialLinks } from "./SocialLinks";
@@ -12,6 +13,7 @@ import { SocialLinks } from "./SocialLinks";
 export function Layout() {
   return (
     <>
+      <Loader />
       <div className="layout">
         <Home />
         <Info />
@@ -19,9 +21,9 @@ export function Layout() {
       <div className="mobileLayout">
         <Navbar />
         <main className="hero stagger">
-          <img src={me} alt="Vigneshwaran" />
+          <img src={me} alt="Vigneshwaran" className="avatar" />
           <h2>
-            Hello, I'm <span className="name">vickey</span>
+            Hello, I'm <span className="name">Vickey</span>
           </h2>
           <Bio />
           <div className="hero-actions">

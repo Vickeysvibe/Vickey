@@ -1,0 +1,61 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 950; /* above the page and lightbox, below the cursor dot */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #151515;
+  transition: opacity 0.7s var(--ease-out), visibility 0.7s;
+}
+.loader.is-leaving {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* "Vibe" with a slow light sweep across the letters */
+.loader-logo {
+  font-family: "Pacifico", cursive;
+  font-size: 56px;
+  line-height: 1.2;
+  color: transparent;
+  background: linear-gradient(
+    110deg,
+    #4a4a4f 35%,
+    aliceblue 50%,
+    #4a4a4f 65%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+  animation: loader-sheen 2s linear infinite;
+}
+.loader-logo.is-ready {
+  opacity: 1;
+  transform: none;
+}
+.loader.is-leaving .loader-logo {
+  transform: translateY(-8px) scale(1.04);
+}
+@keyframes loader-sheen {
+  from {
+    background-position: 120% 0;
+  }
+  to {
+    background-position: -120% 0;
+  }
+}
+
+/* While loading: hold the intro animations at their start, lock scroll */
+html[data-loading] body {
+  overflow: hidden;
+}
+html[data-loading] .stagger > *,
+html[data-loading] .rise-late {
+  animation-play-state: paused;
+}

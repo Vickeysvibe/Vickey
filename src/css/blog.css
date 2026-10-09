@@ -12,8 +12,6 @@
   justify-content: space-between;
   background-color: #1b1b1d;
   border-radius: 20px;
-  opacity: 0.6;
-  transition: transform 0.3s, opacity 0.3s;
   h5 {
     display: flex;
     justify-content: space-between;
@@ -33,12 +31,6 @@
   p {
     font-size: 12px;
     font-weight: 300;
-  }
-}
-@media (hover: hover) {
-  .blog-card:hover {
-    opacity: 1;
-    transform: scale(1.05);
   }
 }
 
@@ -80,7 +72,6 @@
 @media only screen and (max-width: 999px) {
   .blog-card {
     padding: 24px;
-    opacity: 0.8;
     h1 {
       font-size: 20px;
     }

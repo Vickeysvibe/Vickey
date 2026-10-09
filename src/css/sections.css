@@ -6,21 +6,11 @@
   gap: 15px;
 }
 
-/* Shared tile look for skills and cards */
+/* Shared tile look for skills and cards (hover comes from .lift) */
 .skill-grid li,
 .card {
   background-color: #1b1b1d;
   border-radius: 20px;
-  opacity: 0.6;
-  transition: transform 0.5s, opacity 0.5s;
-}
-/* Hover only on real pointers so taps don't leave cards stuck "zoomed" */
-@media (hover: hover) {
-  .skill-grid li:hover,
-  .card:hover {
-    transform: scale(1.1);
-    opacity: 1;
-  }
 }
 
 /* ---------- Skills ---------- */
@@ -94,10 +84,6 @@
 @media only screen and (max-width: 999px) {
   .section-body {
     gap: 24px;
-  }
-  .skill-grid li,
-  .card {
-    opacity: 0.8;
   }
   .skill-grid {
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));

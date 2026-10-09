@@ -16,8 +16,8 @@ export const Personal = () => (
       </Link>
       <h1 className="name">Off the clock</h1>
       <p>
-        Snaps of whatever I'm up to when I'm not shipping code. No theme, no
-        plan. I just do things.
+        Things I saw. Moments I kept. Little pieces of life that caught my eye.
+        No theme, no plan. Just moments worth keeping.
       </p>
     </header>
     <main className="personal-body">

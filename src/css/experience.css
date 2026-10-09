@@ -62,24 +62,13 @@
 /* ---------- Card ---------- */
 .xp-card {
   padding: 24px 28px;
-  border: 1px solid transparent;
   border-radius: 20px;
   background-color: #1b1b1d;
-  opacity: 0.75;
-  transition: opacity 0.4s var(--ease-out), border-color 0.4s,
-    transform 0.4s var(--ease-out);
   p {
     margin-top: 14px;
     font-size: 13.5px;
     line-height: 1.6;
     color: #a5a5a5;
-  }
-}
-@media (hover: hover) {
-  .xp:hover .xp-card {
-    opacity: 1;
-    border-color: rgba(240, 248, 255, 0.08);
-    transform: translateX(4px);
   }
 }
 
@@ -105,12 +94,13 @@ a.xp-company:focus-visible {
   color: aliceblue;
 }
 .xp-company-arrow {
-  font-size: 12px;
+  font-size: 8px;
   transition: transform 0.3s var(--ease-out);
+  rotate: 270deg;
 }
 a.xp-company:hover .xp-company-arrow,
 a.xp-company:focus-visible .xp-company-arrow {
-  transform: translate(2px, -2px);
+  transform: translate(1px, -1px);
 }
 
 .xp-when {
@@ -141,7 +131,6 @@ a.xp-company:focus-visible .xp-company-arrow {
   }
   .xp-card {
     padding: 20px;
-    opacity: 0.85;
     p {
       font-size: 14px;
     }

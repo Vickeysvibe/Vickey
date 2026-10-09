@@ -25,11 +25,6 @@ const projects = [
     link: "https://github.com/Vickeysvibe/Quote-o-gram",
   },
   {
-    title: "ClientsBridge - backend intern",
-    tech: "MERN - stack, socket.io",
-    desc: "A freelancing platform connecting freelancers and companies, with real-time chat and role-based auth.",
-  },
-  {
     title: "ConstructEase",
     tech: "MERN - stack, Excel.js, puppeteer",
     desc: "A site management platform for construction companies to manage sites, contractors, vendors and products.",

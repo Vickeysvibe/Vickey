@@ -81,7 +81,7 @@ export const ContributionCalendar = () => {
     ? "Loading GitHub activity…"
     : failed
       ? "GitHub activity is unavailable right now"
-      : `${total.toLocaleString()} contributions in ${periodLabel(weeks)}`;
+      : `${total.toLocaleString()} little steps in ${periodLabel(weeks)}`;
 
   return (
     <section

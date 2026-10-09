@@ -6,7 +6,7 @@ import { Reveal } from "./Reveal";
 // Every card has the same fixed rows (2-line title, 1-line tech, 4-line
 // description, link row) so all cards render at the same size.
 const Card = ({ title, tech, desc, link }) => (
-  <article className="card">
+  <article className="card lift">
     <h3 title={title}>{title}</h3>
     <h6 title={tech}>{tech}</h6>
     <p title={desc}>{desc}</p>

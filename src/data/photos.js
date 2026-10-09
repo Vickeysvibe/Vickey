@@ -3,6 +3,8 @@
 // leading number sets the order and the rest becomes the caption
 // ("Marina beach sunset").
 
+import sizes from "./photo-sizes.json"; // written by scripts/photo-sizes.js
+
 // webpack bundles every matching file; Jest has no require.context, so
 // setupTests.js mocks this module.
 const context = require.context(
@@ -27,6 +29,10 @@ const toCaption = (key) => {
 const photos = context
   .keys()
   .sort()
-  .map((key) => ({ src: context(key), caption: toCaption(key) }));
+  .map((key) => {
+    // Fallback shape for a photo added since the last start/build
+    const [width, height] = sizes[key.replace(/^\.\//, "")] ?? [4, 3];
+    return { src: context(key), caption: toCaption(key), width, height };
+  });
 
 export default photos;

@@ -11,7 +11,7 @@ export const BlogList = () => (
     </Reveal>
     {blogs.map((post) => (
       <Reveal key={post.key}>
-        <Link className="blog-card" to={`/blog/${post.key}`}>
+        <Link className="blog-card lift" to={`/blog/${post.key}`}>
           <div>
             <h5>
               {post.cat1} {post.cat2}

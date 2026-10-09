@@ -14,7 +14,7 @@ const Company = ({ name, url }) =>
     >
       {name}
       <span className="xp-company-arrow" aria-hidden="true">
-        ↗
+        ⤷
       </span>
     </a>
   ) : (
@@ -54,7 +54,7 @@ export const Experience = () => (
             delay={i * 0.06}
           >
             <span className="xp-dot" aria-hidden="true" />
-            <article className="xp-card">
+            <article className="xp-card lift">
               <header className="xp-head">
                 <h3>{role}</h3>
                 <Company name={company} url={companyUrl} />

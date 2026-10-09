@@ -7,7 +7,7 @@ export const Skills = () => (
     <h1 className="topic">Skills</h1>
     <ul className="section-body skill-grid">
       {skills.map(({ name, icon }) => (
-        <li key={name} title={name}>
+        <li key={name} title={name} className="lift">
           <img src={icon} alt={name} />
         </li>
       ))}

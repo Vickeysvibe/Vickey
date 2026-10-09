@@ -26,5 +26,15 @@ window.ResizeObserver ??= class {
 
 window.scrollTo = () => {};
 
+// jsdom never loads images; resolve them right away so the loader can finish.
+window.Image = class {
+  set src(_) {
+    setTimeout(() => this.onload?.());
+  }
+};
+
+// Keep tests off the network (the GitHub calendar fetches on mount).
+window.fetch = () => Promise.reject(new Error("network disabled in tests"));
+
 // data/photos uses webpack's require.context, which Jest doesn't provide.
 jest.mock("./data/photos", () => ({ __esModule: true, default: [] }));

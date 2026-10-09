@@ -22,7 +22,7 @@ export const Home = () => (
       <ContributionCalendar />
     </div>
     <div className="links rise-late">
-      <img src={me} alt="Vigneshwaran" />
+      <img src={me} alt="Vigneshwaran" className="avatar" />
       <SocialLinks />
     </div>
   </div>

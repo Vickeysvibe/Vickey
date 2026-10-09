@@ -100,6 +100,41 @@ const Lightbox = ({ photos, index, onChange, onClose }) => {
   );
 };
 
+// A grid cell that holds the photo's exact shape and shimmers until the
+// image arrives, then fades it in.
+const Photo = ({ src, caption, width, height, onOpen }) => {
+  const [loaded, setLoaded] = useState(false);
+  const imgRef = useRef(null);
+
+  // Cached images can finish before React attaches onLoad.
+  useEffect(() => {
+    if (imgRef.current?.complete && imgRef.current.naturalWidth) {
+      setLoaded(true);
+    }
+  }, []);
+
+  return (
+    <button
+      type="button"
+      className={loaded ? "photo is-loaded" : "photo"}
+      style={{ aspectRatio: `${width} / ${height}` }}
+      onClick={onOpen}
+      aria-label={`Open ${caption || "photo"}`}
+      aria-busy={!loaded}
+    >
+      <img
+        ref={imgRef}
+        src={src}
+        alt={caption}
+        loading="lazy"
+        decoding="async"
+        onLoad={() => setLoaded(true)}
+      />
+      {caption && <span className="photo-caption">{caption}</span>}
+    </button>
+  );
+};
+
 // Masonry grid of photos; clicking one opens the full-screen viewer.
 export const PhotoGallery = ({ photos }) => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -108,17 +143,9 @@ export const PhotoGallery = ({ photos }) => {
   return (
     <>
       <div className="photo-grid">
-        {photos.map(({ src, caption }, i) => (
-          <Reveal key={src} className="photo-cell" delay={(i % 4) * 0.06}>
-            <button
-              type="button"
-              className="photo"
-              onClick={() => setOpenIndex(i)}
-              aria-label={`Open ${caption || "photo"}`}
-            >
-              <img src={src} alt={caption} loading="lazy" decoding="async" />
-              {caption && <span className="photo-caption">{caption}</span>}
-            </button>
+        {photos.map((photo, i) => (
+          <Reveal key={photo.src} className="photo-cell" delay={(i % 4) * 0.06}>
+            <Photo {...photo} onOpen={() => setOpenIndex(i)} />
           </Reveal>
         ))}
       </div>

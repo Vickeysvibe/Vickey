@@ -9,9 +9,10 @@
   flex-direction: column;
   gap: 16px;
   background-color: #1b1b1d;
+  border: 1px solid transparent;
   border-radius: 20px;
-  opacity: 0.6;
-  transition: opacity 0.5s;
+  opacity: var(--card-rest-opacity);
+  transition: opacity 0.4s var(--ease-out), border-color 0.4s var(--ease-out);
   input,
   textarea {
     width: 100%;
@@ -46,6 +47,7 @@
 .contactForm:hover,
 .contactForm:focus-within {
   opacity: 1;
+  border-color: rgba(240, 248, 255, 0.08);
 }
 .form-status {
   min-height: 1.5em; /* reserve space so the form doesn't jump */

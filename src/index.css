@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&family=Parisienne&display=swap");
 
 /* Minimal reset (replaces the Tailwind play-CDN preflight we used to load at runtime) */
 *,
@@ -82,10 +82,42 @@ body {
   display: none;
 }
 
-/* Handwritten name, in the spirit of the macOS "hello" lettering */
+/* Elegant script for the name */
 .name {
-  font-family: "Satisfy", cursive;
+  font-family: "Parisienne", cursive;
   font-weight: 400; /* the font has one weight; avoid faux-bold */
+  font-size: 1.25em; /* scripts read small next to Quicksand */
+  line-height: 1;
+}
+
+/* ---------- Card hover: one standard for every card ---------- */
+:root {
+  --card-rest-opacity: 0.7;
+}
+.lift {
+  border: 1px solid transparent;
+  opacity: var(--card-rest-opacity);
+  transition: transform 0.4s var(--ease-out), opacity 0.4s var(--ease-out),
+    border-color 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+}
+/* Real pointers only, so taps don't leave cards stuck in the hover state */
+@media (hover: hover) {
+  .lift:hover,
+  .lift:focus-within {
+    opacity: 1;
+    transform: translateY(-4px);
+    border-color: rgba(240, 248, 255, 0.08);
+  }
+}
+@media only screen and (max-width: 999px) {
+  :root {
+    --card-rest-opacity: 0.85;
+  }
+}
+
+/* Profile picture, shown in black and white */
+.avatar {
+  filter: grayscale(1);
 }
 
 /* Outlined call-to-action ("Explore", "Off the clock") */
